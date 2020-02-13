@@ -1,0 +1,39 @@
+{
+    "name": "vscode-byteman",
+    "displayName": "vscode-byteman",
+    "description": "A Byteman Language Extension for Visual Studio Code",
+    "icon": "images/byteman.png",
+    "version": "0.0.1",
+    "publisher": "aptmac",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aptmac/vscode-byteman"
+    },
+    "categories": [
+        "Languages",
+        "Grammars",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "byteman",
+            "aliases": ["Byteman", "byteman"],
+            "extensions": [".btm"],
+            "configuration": "./byteman.language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "byteman",
+            "scopeName": "source.byteman",
+            "path": "./syntaxes/byteman.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "byteman",
+                "path": "./snippets/byteman.snippets.json"
+            }
+        ]
+    }
+}
